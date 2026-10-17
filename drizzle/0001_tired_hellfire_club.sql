@@ -1,0 +1,2 @@
+CREATE UNIQUE INDEX "predefined_plan_name_type_unique" ON "plans" USING btree ("plan_type","name") WHERE "plans"."is_predefined" = true;--> statement-breakpoint
+CREATE UNIQUE INDEX "custom_plan_owner_name_type_unique" ON "plans" USING btree ("owner_account_id","plan_type","name") WHERE "plans"."is_predefined" = false;
